@@ -1,0 +1,12 @@
+---
+extends: standard
+
+env:
+  node: true
+  mocha: true
+
+rules:
+  max-len: 1
+  complexity:
+    - 1
+    - max: 10
