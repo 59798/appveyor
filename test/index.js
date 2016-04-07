@@ -16,7 +16,7 @@ it('should to exit the process at 0 at the time of play end', function (done) {
   var child = simplayer(fileName)
   child.stdout.pipe(process.stdout)
   child.stderr.pipe(process.stderr)
-  child.on('exit', function (code) {
+  child.on('close', function (code) {
     var end = Date.now()
     assert(code === 0)
     assert(end - begin > fileMsec)
